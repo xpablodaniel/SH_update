@@ -1,0 +1,21 @@
+# Archivos de datos CSV
+*.csv
+
+# Archivos de salida temporal
+*.txt
+*.log
+
+# Archivos de respaldo
+*.bak
+*~
+
+# Archivos de estado
+dia_libre
+
+# Directorios temporales
+tmp/
+temp/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
