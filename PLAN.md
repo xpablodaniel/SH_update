@@ -33,6 +33,17 @@ Crear un repositorio público con versiones refinadas y documentadas de los scri
 - [x] **Módulo gestion_reservas** ✅
   - reservas.sh (modernizado)
   - config.sh (14 columnas configurables)
+  - parser.sh (CSV robusto)
+  - buscar_reserva.sh (búsqueda individual)
+  - README.md (documentación completa)
+  - Estado: 100% funcional
+  - Commit: `25d06b9`
+
+- [x] **Módulo apagado_automatico** ✅
+  - apagar.sh (script principal)
+  - config.sh (configuración modular)
+  - modo_libre.sh (desactivar apagado)
+  - modo_laboral.sh (activar apagado)
   - README.md (documentación completa)
   - Estado: 100% funcional
   - Commit: Pendiente
@@ -40,18 +51,10 @@ Crear un repositorio público con versiones refinadas y documentadas de los scri
 - [ ] **Módulo gestion_csv**
   - borrar.sh
   - planilla.sh
-  - **reserva.sh** ← Próximo a refinar/modularizar
   - config.sh
   - test_portabilidad.sh
   - README.md
   - MIGRACION.md
-
-- [ ] **Módulo apagado_automatico**
-  - apagar.sh
-  - modo_libre.sh
-  - modo_laboral.sh
-  - test_apagar.sh
-  - README.md
 
 - [ ] **README.md principal**
   - Documentación general del repositorio
@@ -86,9 +89,18 @@ Crear un repositorio público con versiones refinadas y documentadas de los scri
   - ✅ Normalización automática a MAYÚSCULAS
   - ✅ Búsqueda por voucher/DNI/apellido
 
+- [x] **Migrar módulo apagado_automatico**
+  - ✅ Creado módulo `apagado_automatico/` independiente
+  - ✅ config.sh con configuración centralizada
+  - ✅ apagar.sh modernizado con logging y validaciones
+  - ✅ modo_libre.sh y modo_laboral.sh (switch de modos)
+  - ✅ README completo con guías de instalación
+  - ✅ Soporte para notificaciones múltiples (wall + notify-send)
+  - ✅ Modo prueba, estado y cancelación
+
 ### Próxima Sesión
-- [ ] Commitear cambios y push al repositorio
-- [ ] Decidir siguiente módulo: gestion_csv o apagado_automatico
+- [ ] Commitear módulo apagado_automatico
+- [ ] Decidir siguiente módulo: gestion_csv o scripts individuales
 
 ### Futuras Sesiones
 - [ ] Migrar apagado_automatico
@@ -107,11 +119,11 @@ Sh_update/
 ├── .gitignore                  # Archivos ignorados
 ├── PLAN.md                     # Este archivo
 │
-├── apagado_automatico/         # Módulo 1: Apagado automático
+├── apagado_automatico/         # Módulo 1: Apagado automático ✅
 │   ├── apagar.sh
 │   ├── modo_libre.sh
 │   ├── modo_laboral.sh
-│   ├── test_apagar.sh
+│   ├── config.sh
 │   └── README.md
 │
 ├── gestion_caja/               # Módulo 2: Análisis de caja ✅

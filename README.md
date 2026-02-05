@@ -4,6 +4,14 @@ Sistema modular de automatización para gestión operativa hotelera en Ubuntu/WS
 
 ## 📦 Módulos Disponibles
 
+### ✅ Módulo apagado_automatico (v1.0)
+Sistema de apagado automático programado con switch de días libres/laborales.
+- Apagado programado con aviso previo (5 minutos)
+- Control simple mediante archivos de estado
+- Modo libre/laboral sin editar crontab
+- Logging automático de eventos
+- [Ver documentación completa →](apagado_automatico/README.md)
+
 ### ✅ Módulo gestion_caja (v1.0)
 Análisis completo de movimientos de caja diaria.
 - Extracción automática de datos desde imágenes
@@ -11,7 +19,7 @@ Análisis completo de movimientos de caja diaria.
 - Generación de informes con estadísticas
 - [Ver documentación completa →](gestion_caja/README.md)
 
-### ✅ Módulo gestion_reservas (v1.0) ⭐ NUEVO
+### ✅ Módulo gestion_reservas (v1.0)
 Procesamiento de reservas del gestor hotelero.
 - Parser CSV robusto (maneja comas en campos)
 - Normalización automática a MAYÚSCULAS
@@ -20,12 +28,23 @@ Procesamiento de reservas del gestor hotelero.
 - [Ver documentación completa →](gestion_reservas/README.md)
 
 ### 🔄 Módulos Pendientes
-- **apagado_automatico/** - Sistema de apagado automático programado
 - **gestion_csv/** - Utilidades CSV adicionales
 
 ---
 
 ## 🚀 Inicio Rápido
+
+### Apagado Automático
+```bash
+cd apagado_automatico/
+
+# Activar/desactivar apagado
+./modo_libre.sh       # Desactivar (día libre)
+./modo_laboral.sh     # Activar (día laboral)
+
+# Ver estado
+./apagar.sh -s
+```
 
 ### Gestión de Caja
 ```bash
@@ -66,13 +85,20 @@ Sh_update/
 ├── PLAN.md                    # Roadmap del proyecto
 ├── .gitignore                 # Archivos ignorados
 │
-├── gestion_caja/              # Módulo 1: Análisis de caja ✅
+├── apagado_automatico/        # Módulo 1: Apagado automático ✅
+│   ├── apagar.sh
+│   ├── modo_libre.sh
+│   ├── modo_laboral.sh
+│   ├── config.sh
+│   └── README.md
+│
+├── gestion_caja/              # Módulo 2: Análisis de caja ✅
 │   ├── caja.sh
 │   ├── config.sh
 │   ├── README.md
 │   └── INTEGRACION_CAJADIARIA.md
 │
-└── gestion_reservas/          # Módulo 2: Gestión de reservas ✅
+└── gestion_reservas/          # Módulo 3: Gestión de reservas ✅
     ├── config.sh
     ├── parser.sh
     ├── reservas.sh
