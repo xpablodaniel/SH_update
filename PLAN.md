@@ -30,6 +30,13 @@ Crear un repositorio público con versiones refinadas y documentadas de los scri
 
 ### 🔄 Pendientes
 
+- [x] **Módulo gestion_reservas** ✅
+  - reservas.sh (modernizado)
+  - config.sh (14 columnas configurables)
+  - README.md (documentación completa)
+  - Estado: 100% funcional
+  - Commit: Pendiente
+
 - [ ] **Módulo gestion_csv**
   - borrar.sh
   - planilla.sh
@@ -63,13 +70,25 @@ Crear un repositorio público con versiones refinadas y documentadas de los scri
 - ✅ Configurar .gitignore
 - ✅ Migrar gestion_caja completo
 
-### Próxima Sesión
-- [ ] **Revisar y refinar reserva.sh**
-  - Posible creación de módulo `gestion_reservas/` independiente
-  - Mejorar funcionalidad
-  - Documentar completamente
+### Sesión 05/02/2026
+- [x] **Revisar y refinar reserva.sh**
+  - ✅ Creado módulo `gestion_reservas/` independiente
+  - ✅ Script modernizado con manejo de errores
+  - ✅ Configuración modular y documentada
+  - ✅ README completo con ejemplos
   
-- [ ] Decidir estructura modular vs integrada para gestion_csv
+- [x] **Estructura modular para gestión de reservas**
+  - ✅ config.sh con 14 columnas personalizables
+  - ✅ parser.sh con manejo robusto de CSV
+  - ✅ reservas.sh con validaciones y filtros
+  - ✅ buscar_reserva.sh para consultas individuales
+  - ✅ Integración con LibreOffice Calc
+  - ✅ Normalización automática a MAYÚSCULAS
+  - ✅ Búsqueda por voucher/DNI/apellido
+
+### Próxima Sesión
+- [ ] Commitear cambios y push al repositorio
+- [ ] Decidir siguiente módulo: gestion_csv o apagado_automatico
 
 ### Futuras Sesiones
 - [ ] Migrar apagado_automatico
@@ -101,8 +120,8 @@ Sh_update/
 │   ├── README.md
 │   └── INTEGRACION_CAJADIARIA.md
 │
-├── gestion_reservas/           # Módulo 3: Gestión de reservas (propuesto)
-│   ├── reserva.sh
+├── gestion_reservas/           # Módulo 3: Gestión de reservas ✅
+│   ├── reservas.sh
 │   ├── config.sh
 │   └── README.md
 │
